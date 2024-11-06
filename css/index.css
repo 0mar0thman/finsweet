@@ -1,0 +1,243 @@
+header.home .header-hero {
+  min-height: 60vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img img {
+  width: 10%;
+}
+
+.div-p {
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  background: linear-gradient(
+    329.39deg,
+    var(--dark-blue) -10.96%,
+    rgba(28, 30, 83, 0.42) 103.96%
+  );
+  width: 55%;
+}
+
+.div-img-lg {
+  position: relative;
+  overflow: hidden;
+}
+
+.div-img-sec6 {
+  align-items: baseline;
+}
+
+.div-woman {
+  position: relative;
+  overflow: hidden;
+}
+
+.div-woman-p {
+  position: absolute;
+  color: white;
+  z-index: 1;
+  padding: 10px;
+  background: linear-gradient(
+    329.39deg,
+    var(--dark-blue) -10.96%,
+    rgba(28, 30, 83, 0.42) 103.96%
+  );
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div-input {
+  overflow: hidden;
+  background-color: var(--dark-blue);
+}
+
+.div-input input {
+  background-color: var(--dark-blue);
+  border: 1px solid rgb(70, 70, 70);
+}
+
+.dd {
+  align-items: end;
+  padding-bottom: 50px;
+}
+
+.div-comp {
+  position: relative;
+}
+
+.led-comp {
+  overflow: hidden;
+}
+
+.complate-image {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  z-index: 4;
+}
+
+.complate-image2 {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  z-index: 4;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.pb-input {
+  line-height: 10;
+}
+
+.border-gray {
+  border: 1px solid gray;
+}
+
+/* -------hover-------------- */
+
+.hover1 {
+  transition: all 200ms;
+}
+
+.hover1:hover {
+  color: blue;
+  box-shadow: 3px 3px 10px 1px rgb(192, 223, 250),
+    -3px -3px 10px 1px rgb(192, 223, 250);
+  transform: scale(0.99);
+}
+
+.hover2-1 {
+  transition: all 900ms;
+}
+
+.hover2-1:hover {
+  transform: translateY(-5vh);
+}
+
+.hover2-2 {
+  transition: all 900ms;
+}
+
+.hover2-2:hover {
+  transform: translateY(-5vh);
+}
+
+.hover2-3 {
+  transition: all 900ms;
+}
+
+.hover2-3:hover {
+  transform: translateX(3vh);
+}
+
+.hover2 {
+  transition: all 300ms;
+}
+
+.hover2:hover {
+  background-color: black;
+}
+
+.hover3 {
+  transition: all 200ms;
+}
+
+.hover3:hover {
+  background-color: gray;
+}
+
+.hover4-1 {
+  transition: all 200ms;
+}
+
+.hover4-1:active {
+  transform: rotate(45deg);
+}
+
+.hover5 {
+  transition: all 200ms;
+}
+
+.hover5:hover {
+  background-color: #fde4a6;
+}
+
+.hover5-1 {
+  transition: all 200ms;
+}
+
+.hover5-1:hover {
+  background-color: gray;
+}
+
+.hover5-1:active {
+  transform: scale(0.9);
+}
+
+.hover5-2 {
+  transition: all 200ms;
+}
+
+.hover5-2:hover {
+  background-color: #fde4a6;
+}
+
+.hover5-2:active {
+  transform: scale(0.9);
+}
+
+.hover5-5:active {
+  transform: scale(0.97);
+}
+
+.hover5-3 {
+  transition: all 200ms;
+}
+
+.hover5-3:hover {
+  background-color: rgb(0, 50, 125);
+  transform: scale(1.05);
+}
+
+.hover5-4 {
+  transition: all 200ms;
+}
+
+.hover5-4:hover {
+  background-color: rgb(203, 235, 255);
+  transform: scale(1.05);
+}
+
+.hover6 {
+  transition: all 200ms;
+}
+
+.hover6:hover {
+  transform: scale(0.95);
+  color: blue;
+}
+
+.hover6-1 {
+  transition: all 200ms;
+}
+
+.hover6-1:hover {
+  transform: scale(1.05);
+}
+
+.hover-footer {
+  transition: all 200ms;
+}
+
+.hover-footer:hover {
+  color: black;
+  font-weight: bold;
+}
