@@ -1,0 +1,50 @@
+/* =====================================================
+   FINSWEET — Media Query Enhancements
+   ===================================================== */
+
+/* ---------- Small devices (576px+) ---------- */
+@media (min-width: 576px) {
+  .hero h1 { font-size: 2.4rem; }
+}
+
+/* ---------- Medium devices (768px+) ---------- */
+@media (min-width: 768px) {
+  body { font-size: 1.0125rem; }
+
+  .hero p.text-muted { font-size: 1.05rem; }
+}
+
+/* ---------- Large devices (992px+) ---------- */
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.4rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 4vw, 3.8rem);
+  }
+
+  .header-hero {
+    min-height: 65vh;
+  }
+}
+
+/* ---------- XL (1200px+) ---------- */
+@media (min-width: 1200px) {
+  .hero h1 { font-size: 3.8rem; }
+
+  .sec { padding-top: 120px; }
+}
+
+/* ---------- XXL (1400px+) ---------- */
+@media (min-width: 1400px) {
+  .hero h1 { font-size: 4.2rem; }
+}

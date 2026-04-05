@@ -1,0 +1,32 @@
+.navbar {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-color: var(--text-color-muted);
+  --bs-navbar-hover-color: var(--text-color-white);
+  --bs-navbar-disabled-color: rgba(
+    var(--bs-emphasis-color-rgb),
+    0.3
+  );
+  --bs-navbar-active-color: var(--text-color-white);
+  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-nav-link-padding-x: 1rem;
+  --bs-navbar-toggler-padding-y: 0.25rem;
+  --bs-navbar-toggler-padding-x: 0.75rem;
+  --bs-navbar-toggler-font-size: 1.25rem;
+  --bs-navbar-toggler-border-color: rgba(
+    var(--bs-emphasis-color-rgb),
+    0.15
+  );
+  --bs-navbar-toggler-border-radius: var(
+    --bs-border-radius
+  );
+  --bs-navbar-toggler-focus-width: 0.25rem;
+  --bs-navbar-toggler-transition: box-shadow 0.15s
+    ease-in-out;
+}
+
+.navbar-nav {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+}

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finsweet | Home</title>
+    <link rel="icon" type="image/svg" href="./assets/images/icon-jok.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+      :root {
+        --navy:#0f1035; --indigo:#1c1e53; --blue-v:#2405f2;
+        --gold:#fcd980; --gold-lt:#fde4a6; --offwhite:#f4f6fc;
+        --slate:#eef3fb; --ink:#0a0a1a; --muted:#6b7280;
+        --spring:cubic-bezier(0.34,1.56,0.64,1);
+        --smooth:cubic-bezier(0.4,0,0.2,1);
+        --expo:cubic-bezier(0.16,1,0.3,1);
+      }
+      html{scroll-behavior:smooth}
+      body{font-family:'DM Sans',sans-serif;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+      h1,h2,h3,h4,h5,h6{font-family:'Syne',sans-serif;font-weight:700;letter-spacing:-.025em}
+      a{text-decoration:none}
+
+      /* NAVBAR */
+      .main-nav{background:rgba(15,16,53,.95)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);padding:.85rem 0}
+      .main-nav .nav-link{font-family:'Syne',sans-serif;font-size:.875rem;font-weight:500;color:rgba(255,255,255,.72)!important;padding:.45rem .9rem!important;border-radius:8px;position:relative;transition:all 220ms var(--smooth)}
+      .main-nav .nav-link::after{content:'';position:absolute;bottom:3px;left:50%;transform:translateX(-50%) scaleX(0);width:14px;height:2px;background:var(--gold);border-radius:2px;transition:transform 220ms var(--spring)}
+      .main-nav .nav-link:hover,.main-nav .nav-link.active{color:#fff!important;background:rgba(255,255,255,.08)}
+      .main-nav .nav-link:hover::after,.main-nav .nav-link.active::after{transform:translateX(-50%) scaleX(1)}
+      .btn-contact{font-family:'Syne',sans-serif;font-size:.825rem;font-weight:600;letter-spacing:.05em;padding:.5rem 1.35rem;border-radius:8px;border:1.5px solid rgba(255,255,255,.3);color:#fff!important;background:transparent;transition:all 220ms var(--smooth);display:inline-block}
+      .btn-contact:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)!important;box-shadow:0 4px 20px rgba(252,217,128,.35);transform:translateY(-1px)}
+      .navbar-toggler{border:none}
+      .navbar-toggler:focus{box-shadow:none}
+
+      /* HERO */
+      .hero-section{background:linear-gradient(135deg,#080a2a 0%,#0f1035 45%,#1c1e53 80%,#1a1f6e 100%);position:relative;overflow:hidden;min-height:68vh;display:flex;align-items:center;padding:5rem 0 6rem}
+      .hero-section::before{content:'';position:absolute;top:-25%;right:-8%;width:650px;height:650px;background:radial-gradient(circle,rgba(36,5,242,.22) 0%,transparent 65%);animation:blob 8s ease-in-out infinite;pointer-events:none}
+      .hero-section::after{content:'';position:absolute;bottom:-30%;left:-5%;width:480px;height:480px;background:radial-gradient(circle,rgba(252,217,128,.1) 0%,transparent 65%);animation:blob 11s ease-in-out infinite 2s;pointer-events:none}
+      @keyframes blob{0%,100%{transform:scale(1) translate(0,0)}33%{transform:scale(1.08) translate(2%,-2%)}66%{transform:scale(.93) translate(-2%,3%)}}
+      .hero-title{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-.04em;background:linear-gradient(140deg,#fff 50%,rgba(252,217,128,.88) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeUp .8s var(--expo) both}
+      .hero-subtitle{font-size:1.05rem;line-height:1.75;color:rgba(200,207,232,.85)!important;max-width:430px;animation:fadeUp .8s var(--expo) .1s both}
+      .hero-actions{animation:fadeUp .8s var(--expo) .2s both}
+      @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+      .hero-img{animation:floatY 5s ease-in-out infinite;filter:drop-shadow(0 24px 48px rgba(36,5,242,.25))}
+      @keyframes floatY{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(1deg)}}
+      .btn-gold{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.04em;padding:.85rem 2rem;border-radius:12px;background:var(--gold);color:var(--ink)!important;border:none;transition:all 280ms var(--spring);box-shadow:0 4px 20px rgba(252,217,128,.4);display:inline-block}
+      .btn-gold:hover{background:var(--gold-lt);transform:translateY(-3px) scale(1.02);box-shadow:0 12px 32px rgba(252,217,128,.45)}
+      .btn-ghost{font-family:'Syne',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.04em;padding:.85rem 2rem;border-radius:12px;border:1.5px solid rgba(255,255,255,.28);color:rgba(255,255,255,.9)!important;background:rgba(255,255,255,.06);transition:all 250ms var(--smooth);display:inline-block}
+      .btn-ghost:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);transform:translateY(-2px)}
+
+      /* PARTNER BAR */
+      .partner-bar{background:#fff;border-bottom:1px solid rgba(28,30,83,.07);padding:2rem 0}
+      .stat-num{font-family:'Syne',sans-serif;font-size:2.1rem;font-weight:800;color:var(--indigo);letter-spacing:-.04em;line-height:1.1}
+      .stat-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+      .partner-logo{height:26px;width:auto;object-fit:contain;filter:grayscale(100%) opacity(.4);transition:filter 250ms var(--smooth)}
+      .partner-logo:hover{filter:grayscale(0%) opacity(1)}
+
+      /* HOW WE WORK */
+      .how-section{background:var(--offwhite)}
+      .eyebrow{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-v);display:flex;align-items:center;gap:.5rem}
+      .eyebrow::before{content:'';width:22px;height:2px;background:var(--blue-v);border-radius:2px;flex-shrink:0}
+      .section-title{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;letter-spacing:-.035em;color:var(--ink)}
+      .work-card{background:#fff;border-radius:20px;border:1px solid rgba(28,30,83,.07);padding:1.75rem;height:100%;transition:all 300ms var(--expo);position:relative;overflow:hidden}
+      .work-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(36,5,242,.03),rgba(252,217,128,.05));opacity:0;transition:opacity 250ms}
+      .work-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(28,30,83,.12),0 4px 12px rgba(28,30,83,.07);border-color:rgba(36,5,242,.1)}
+      .work-card:hover::before{opacity:1}
+      .work-card h5{font-size:1.05rem;font-weight:700;color:var(--ink)}
+      .work-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.65}
+      .link-arrow{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--blue-v);display:inline-flex;align-items:center;gap:.45rem;transition:gap 250ms var(--spring)}
+      .link-arrow:hover{gap:.75rem;color:var(--blue-v)}
+
+      /* PROJECTS */
+      .view-more-btn{font-family:'Syne',sans-serif;font-weight:700;font-size:.875rem;color:var(--ink);border:1.5px solid rgba(28,30,83,.18);border-radius:100px;padding:.55rem 1.3rem;display:inline-flex;align-items:center;gap:.45rem;transition:all 230ms var(--smooth)}
+      .view-more-btn:hover{background:var(--ink);color:#fff;gap:.7rem}
+      .proj-card{position:relative;overflow:hidden;border-radius:20px;cursor:pointer}
+      .proj-card img{width:100%;height:100%;object-fit:cover;transition:transform 600ms var(--expo);display:block}
+      .proj-card:hover img{transform:scale(1.07)}
+      .proj-overlay{position:absolute;inset:0;background:linear-gradient(160deg,transparent 25%,rgba(8,10,42,.88) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.75rem;opacity:0;transition:opacity 300ms var(--smooth)}
+      .proj-card:hover .proj-overlay{opacity:1}
+      .proj-overlay h3{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+      .proj-overlay p{font-size:.83rem;color:rgba(255,255,255,.68);margin-bottom:.75rem}
+      .proj-link{font-family:'Syne',sans-serif;font-weight:700;font-size:.825rem;color:var(--gold);display:inline-flex;align-items:center;gap:.4rem;transition:gap 220ms var(--spring)}
+      .proj-link:hover{gap:.65rem;color:var(--gold)}
+      .proj-main{min-height:520px}
+      .proj-small{min-height:244px}
+
+      /* FEATURES */
+      .features-section{background:var(--slate)}
+      .feat-card{background:#fff;border-radius:20px;border:1px solid rgba(28,30,83,.07);padding:2rem 1.75rem;height:100%;display:flex;flex-direction:column;gap:.9rem;transition:all 320ms var(--expo);position:relative;overflow:hidden}
+      .feat-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue-v),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform 300ms var(--spring)}
+      .feat-card:hover{transform:translateY(-7px);box-shadow:0 20px 52px rgba(28,30,83,.13)}
+      .feat-card:hover::after{transform:scaleX(1)}
+      .feat-card h5{font-size:1rem;font-weight:700;color:var(--ink);margin:0}
+      .feat-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.65;flex:1}
+
+      /* TESTIMONIAL */
+      .testimonial-section{background:#fff}
+      .testimonial-card{background:var(--offwhite);border-radius:32px;padding:2.75rem;border:1px solid rgba(28,30,83,.07)}
+      .quote-mark{font-family:'Syne',sans-serif;font-size:5.5rem;line-height:.55;color:var(--gold);font-weight:800;display:block;margin-bottom:1.25rem}
+      .testimonial-text{font-size:1.2rem;font-style:italic;line-height:1.65;color:var(--ink);margin-bottom:2rem}
+      .avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid #fff;box-shadow:0 4px 12px rgba(28,30,83,.15)}
+      .reviewer-name{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);margin:0}
+      .reviewer-role{font-size:.8rem;color:var(--muted);margin:0}
+      .nav-circle{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(28,30,83,.15);background:#fff;display:flex;align-items:center;justify-content:center;transition:all 220ms var(--smooth);cursor:pointer}
+      .nav-circle:hover,.nav-circle.active{background:var(--ink);border-color:var(--ink)}
+      .nav-circle img{width:15px}
+      .nav-circle:hover img,.nav-circle.active img{filter:invert(1)}
+
+      /* FAQ */
+      .faq-section{background:var(--slate)}
+      .faq-item{background:#fff;border-radius:14px;border:1px solid rgba(28,30,83,.08);padding:1.4rem 1.6rem;display:flex;align-items:flex-start;gap:1.1rem;transition:all 230ms var(--smooth);cursor:pointer}
+      .faq-item:hover{border-color:rgba(36,5,242,.14);box-shadow:0 4px 24px rgba(28,30,83,.08);transform:translateX(4px)}
+      .faq-num{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:800;color:var(--blue-v);background:rgba(36,5,242,.08);padding:.3rem .55rem;border-radius:6px;letter-spacing:.05em;white-space:nowrap;flex-shrink:0;margin-top:2px}
+      .faq-q{font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;color:var(--ink);flex:1;margin:0}
+      .faq-answer{font-family:'DM Sans',sans-serif;font-size:.875rem;color:var(--muted);line-height:1.7;margin-top:.5rem;font-weight:400}
+      .faq-toggle{width:28px;height:28px;border-radius:50%;background:var(--offwhite);border:1px solid rgba(28,30,83,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 250ms var(--spring);cursor:pointer}
+      .faq-toggle:hover{background:var(--blue-v);border-color:var(--blue-v)}
+      .faq-toggle:hover img{filter:invert(1)}
+      .faq-toggle img{width:14px}
+
+      /* INQUIRY */
+      .inquiry-card{border-radius:28px;overflow:hidden;box-shadow:0 32px 80px rgba(8,10,42,.18)}
+      .inquiry-img-side{position:relative;overflow:hidden;min-height:400px}
+      .inquiry-img-side img{width:100%;height:100%;object-fit:cover;transition:transform 600ms var(--expo)}
+      .inquiry-card:hover .inquiry-img-side img{transform:scale(1.04)}
+      .inquiry-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(8,10,42,.72) 0%,rgba(28,30,83,.4) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem}
+      .inquiry-overlay h2{font-size:clamp(1.5rem,2.5vw,2.1rem);font-weight:800;color:#fff;line-height:1.2;margin-bottom:.75rem}
+      .inquiry-overlay p{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0}
+      .inquiry-form-side{background:linear-gradient(160deg,var(--navy) 0%,var(--indigo) 100%);padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:1.1rem}
+      .inquiry-form-side h3{font-size:1.45rem;font-weight:800;color:#fff;margin-bottom:0}
+      .form-desc{font-size:.875rem;color:rgba(255,255,255,.55);margin:0;line-height:1.65}
+      .form-field{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.875rem 1.1rem;color:#fff;font-family:'DM Sans',sans-serif;font-size:.9rem;width:100%;outline:none;transition:all 220ms var(--smooth)}
+      .form-field::placeholder{color:rgba(255,255,255,.38)}
+      .form-field:focus{border-color:rgba(252,217,128,.5);background:rgba(255,255,255,.1);box-shadow:0 0 0 3px rgba(252,217,128,.12)}
+      .btn-submit{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.04em;padding:.9rem;border-radius:12px;background:var(--gold);color:var(--ink);border:none;cursor:pointer;width:100%;transition:all 280ms var(--spring);box-shadow:0 4px 20px rgba(252,217,128,.35)}
+      .btn-submit:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 8px 28px rgba(252,217,128,.45)}
+      .link-muted{font-size:.83rem;color:rgba(255,255,255,.45);text-align:center;transition:color 200ms}
+      .link-muted:hover{color:rgba(255,255,255,.85)}
+
+      /* BLOG */
+      .blog-section{background:var(--offwhite)}
+      .blog-card{background:#fff;border-radius:20px;overflow:hidden;border:1px solid rgba(28,30,83,.07);display:flex;flex-direction:column;height:100%;transition:all 320ms var(--expo)}
+      .blog-card:hover{transform:translateY(-7px);box-shadow:0 20px 52px rgba(28,30,83,.13)}
+      .blog-card .card-img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform 500ms var(--expo)}
+      .blog-card:hover .card-img{transform:scale(1.04)}
+      .blog-card .card-body-inner{padding:1.5rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+      .blog-date{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-v)}
+      .blog-title{font-family:'Syne',sans-serif;font-size:.975rem;font-weight:700;color:var(--ink);line-height:1.4;margin:0}
+      .blog-excerpt{font-size:.85rem;color:var(--muted);line-height:1.6;margin:0;flex:1}
+      .blog-link{font-family:'Syne',sans-serif;font-weight:700;font-size:.825rem;color:var(--ink);display:inline-flex;align-items:center;gap:.4rem;transition:gap 220ms var(--spring),color 220ms}
+      .blog-link:hover{gap:.65rem;color:var(--blue-v)}
+
+      /* FOOTER */
+      .site-footer{background:linear-gradient(160deg,#080a2a 0%,var(--navy) 50%,var(--indigo) 100%);color:#fff;position:relative;overflow:hidden}
+      .site-footer::before{content:'';position:absolute;top:-40%;right:-8%;width:560px;height:560px;background:radial-gradient(circle,rgba(36,5,242,.1) 0%,transparent 65%);pointer-events:none}
+      .footer-desc{font-size:.875rem;color:rgba(255,255,255,.52);line-height:1.75}
+      .footer-contact-pill{background:var(--gold);color:var(--ink);border-radius:16px;padding:1.1rem 1.5rem;display:inline-flex;flex-wrap:wrap;gap:2rem}
+      .pill-label{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:.15rem}
+      .pill-value{font-family:'Syne',sans-serif;font-weight:700;font-size:.875rem}
+      .footer-talk-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.04em;line-height:1.1}
+      .footer-talk-desc{font-size:.875rem;color:rgba(255,255,255,.52);max-width:340px;line-height:1.7}
+      .social-icon{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.95rem;transition:all 220ms var(--smooth)}
+      .social-icon:hover{border-color:var(--gold);color:var(--gold);background:rgba(252,217,128,.1);transform:translateY(-2px)}
+      .footer-divider{border-color:rgba(255,255,255,.08)}
+      .footer-copy{font-size:.78rem;color:rgba(255,255,255,.32)}
+      .footer-link{font-size:.825rem;font-weight:500;color:rgba(255,255,255,.48);transition:color 200ms;position:relative}
+      .footer-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--gold);transition:width 220ms var(--spring)}
+      .footer-link:hover{color:#fff}
+      .footer-link:hover::after{width:100%}
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ═══════ NAVBAR ═══════ -->
+    <nav class="main-nav navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/Logo-2.svg" alt="Finsweet" height="34" />
+        </a>
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="privacy.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          </ul>
+          <div class="ms-lg-3 mt-3 mt-lg-0">
+            <a href="contact-us.html" class="btn-contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero-section">
+      <div class="container position-relative" style="z-index:1;">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h1 class="hero-title mb-3">Building stellar websites for early startups</h1>
+            <p class="hero-subtitle mb-4">
+              We craft high-performance digital experiences that help startups grow — from strategy and design to pixel-perfect development.
+            </p>
+            <div class="hero-actions d-flex flex-wrap gap-3">
+              <a href="work.html" class="btn-gold">View our work</a>
+              <a href="pricing.html" class="btn-ghost">View Pricing</a>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-flex justify-content-center">
+            <img class="hero-img img-fluid" src="assets/images/hero-artwork.svg" alt="Hero Artwork" style="max-width:500px;" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ PARTNER BAR ═══════ -->
+    <div class="partner-bar">
+      <div class="container">
+        <div class="row align-items-center gy-3">
+          <div class="col-auto">
+            <p class="stat-num mb-0">100K+</p>
+            <p class="stat-label mb-0">Finsweet Users</p>
+          </div>
+          <div class="col">
+            <div class="d-flex flex-wrap align-items-center justify-content-end gap-4">
+              <img src="./assets/images/logo 11.svg" alt="" class="partner-logo" />
+              <img src="./assets/images/logo 22.svg" alt="" class="partner-logo" />
+              <img src="./assets/images/logo 33.svg" alt="" class="partner-logo" />
+              <img src="./assets/images/logo 44.svg" alt="" class="partner-logo" />
+              <img src="./assets/images/logo 55.svg" alt="" class="partner-logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ HOW WE WORK ═══════ -->
+    <section class="how-section py-5" style="padding-top:6rem!important;padding-bottom:6rem!important;">
+      <div class="container">
+        <div class="row align-items-start gy-5 gx-5">
+          <div class="col-lg-4">
+            <p class="eyebrow mb-3">Our Process</p>
+            <h2 class="section-title mb-3">How we work</h2>
+            <p class="text-muted mb-4" style="font-size:.95rem;line-height:1.75;">
+              We follow a proven process that turns complex challenges into elegant digital solutions.
+            </p>
+            <a href="contact-us.html" class="link-arrow">
+              Get in touch with us <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="work-card">
+                  <img src="/assets/images/pointer 2.svg" alt="" style="width:44px;height:44px;object-fit:contain;" />
+                  <h5 class="mt-3 mb-1">Strategy</h5>
+                  <p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="work-card">
+                  <img src="/assets/images/pointer 1.svg" alt="" style="width:44px;height:44px;object-fit:contain;" />
+                  <h5 class="mt-3 mb-1">Design</h5>
+                  <p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="work-card">
+                  <img src="/assets/images/pointer 3.svg" alt="" style="width:44px;height:44px;object-fit:contain;" />
+                  <h5 class="mt-3 mb-1">Wireframing</h5>
+                  <p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="work-card">
+                  <img src="/assets/images/pointer 4.svg" alt="" style="width:44px;height:44px;object-fit:contain;" />
+                  <h5 class="mt-3 mb-1">Development</h5>
+                  <p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ PROJECTS ═══════ -->
+    <section class="bg-white py-5" style="padding-top:6rem!important;padding-bottom:5rem!important;">
+      <div class="container">
+        <div class="row align-items-end mb-4">
+          <div class="col">
+            <p class="eyebrow mb-2">Portfolio</p>
+            <h2 class="section-title mb-0">View our projects</h2>
+          </div>
+          <div class="col-auto">
+            <a href="work.html" class="view-more-btn">View More <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <div class="proj-card proj-main">
+              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80" alt="Workhub Design" class="w-100" />
+              <div class="proj-overlay">
+                <h3>Workhub Office Webflow Design</h3>
+                <p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam</p>
+                <a href="work.html" class="proj-link">View project <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="proj-card proj-small">
+                  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80" alt="Unisaas Design" class="w-100" />
+                  <div class="proj-overlay">
+                    <h3>Unisaas Website Design</h3>
+                    <a href="work.html" class="proj-link">View portfolio <i class="fa-solid fa-arrow-right-long"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="proj-card proj-small">
+                  <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80" alt="Mobile App" class="w-100" />
+                  <div class="proj-overlay">
+                    <h3>Mobile App Design</h3>
+                    <a href="work.html" class="proj-link">View portfolio <i class="fa-solid fa-arrow-right-long"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FEATURES ═══════ -->
+    <section class="features-section py-5" style="padding-top:6rem!important;padding-bottom:6rem!important;">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow justify-content-center mb-3">Why us</p>
+          <h2 class="section-title mx-auto mb-3" style="max-width:460px;">Design that solves problems, one product at a time</h2>
+          <p class="text-muted mx-auto" style="max-width:380px;font-size:.9rem;">We build more than websites — digital products that convert and grow.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="feat-card"><img src="/assets/images/Icon 1.svg" alt="" style="width:48px;height:48px;object-fit:contain;" /><h5>Uses Client First</h5><p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="feat-card"><img src="/assets/images/Icon 2.svg" alt="" style="width:48px;height:48px;object-fit:contain;" /><h5>Two Free Revision Rounds</h5><p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="feat-card"><img src="/assets/images/Icon 3.svg" alt="" style="width:48px;height:48px;object-fit:contain;" /><h5>Template Customization</h5><p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="feat-card"><img src="/assets/images/Icon 4.svg" alt="" style="width:48px;height:48px;object-fit:contain;" /><h5>24/7 Support</h5><p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="feat-card"><img src="/assets/images/Icon 5.svg" alt="" style="width:48px;height:48px;object-fit:contain;" /><h5>Quick Delivery</h5><p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="feat-card"><img src="/assets/images/Icon 6.svg" alt="" style="width:48px;height:48px;object-fit:contain;" /><h5>Hands-on Approach</h5><p>Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ TESTIMONIAL ═══════ -->
+    <section class="testimonial-section py-5" style="padding-top:5rem!important;padding-bottom:6rem!important;">
+      <div class="container">
+        <div class="row align-items-center gy-5 gx-5">
+          <div class="col-lg-4">
+            <p class="eyebrow mb-3">Testimonials</p>
+            <h2 class="section-title mb-3">What our clients say about us</h2>
+            <p class="text-muted" style="font-size:.9rem;line-height:1.75;">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="testimonial-card">
+              <span class="quote-mark">"</span>
+              <p class="testimonial-text">The best agency we've worked with so far. They understand our product and are able to add new features with a great focus on user experience.</p>
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                <div class="d-flex align-items-center gap-3">
+                  <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" alt="Jenny Wilson" />
+                  <div>
+                    <p class="reviewer-name">Jenny Wilson</p>
+                    <p class="reviewer-role">Vice President of Marketing</p>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="nav-circle"><img src="/assets/images/left.svg" alt="Prev" /></button>
+                  <button class="nav-circle active"><img src="/assets/images/right.svg" alt="Next" /></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FAQ ═══════ -->
+    <section class="faq-section py-5" style="padding-top:5rem!important;padding-bottom:6rem!important;">
+      <div class="container">
+        <div class="row gy-5 gx-5">
+          <div class="col-lg-4">
+            <p class="eyebrow mb-3">FAQ</p>
+            <h2 class="section-title mb-3">Frequently asked questions</h2>
+            <a href="contact-us.html" class="link-arrow d-inline-flex mt-2">
+              Contact us for more info <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+          <div class="col-lg-8">
+            <div class="d-flex flex-column gap-3">
+              <div class="faq-item">
+                <span class="faq-num">01</span>
+                <div class="flex-grow-1">
+                  <p class="faq-q">How much time does it take?</p>
+                  <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="faq-toggle"><img src="/assets/images/+.svg" alt="+" /></div>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">02</span>
+                <p class="faq-q flex-grow-1">What is your class naming convention?</p>
+                <div class="faq-toggle"><img src="/assets/images/++.svg" alt="+" /></div>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">03</span>
+                <p class="faq-q flex-grow-1">How do you communicate?</p>
+                <div class="faq-toggle"><img src="/assets/images/++.svg" alt="+" /></div>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">04</span>
+                <p class="faq-q flex-grow-1">I have a bigger project. Can you handle it?</p>
+                <div class="faq-toggle"><img src="/assets/images/++.svg" alt="+" /></div>
+              </div>
+              <div class="faq-item">
+                <span class="faq-num">05</span>
+                <p class="faq-q flex-grow-1">What is your class naming convention?</p>
+                <div class="faq-toggle"><img src="/assets/images/++.svg" alt="+" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ INQUIRY ═══════ -->
+    <section class="bg-white" style="padding:5rem 0 6rem;">
+      <div class="container">
+        <div class="inquiry-card row g-0">
+          <div class="col-lg-6 inquiry-img-side">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80" alt="Team working" />
+            <div class="inquiry-overlay">
+              <h2>Building stellar websites for early startups</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 inquiry-form-side">
+            <h3>Send an Inquiry</h3>
+            <p class="form-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <input class="form-field" type="text" placeholder="Your Name" />
+            <input class="form-field" type="email" placeholder="Email" />
+            <input class="form-field" type="url" placeholder="Paste your Figma design URL" />
+            <button class="btn-submit">Send an Inquiry ↗</button>
+            <a href="contact-us.html" class="link-muted">Or get in touch with us →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ BLOG ═══════ -->
+    <section class="blog-section py-5" style="padding-top:5rem!important;padding-bottom:6rem!important;">
+      <div class="container">
+        <div class="row align-items-end mb-4">
+          <div class="col">
+            <p class="eyebrow mb-2">Latest Posts</p>
+            <h2 class="section-title mb-0">Our blog</h2>
+          </div>
+          <div class="col-auto">
+            <a href="blog.html" class="view-more-btn">View all posts <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="blog-card">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="" class="card-img" />
+              <div class="card-body-inner">
+                <span class="blog-date">19 Jan 2022</span>
+                <p class="blog-title">How one Webflow user grew his single person consultancy from $0–100K in 14 months</p>
+                <p class="blog-excerpt">See how pivoting to Webflow changed one person's sales strategy and allowed him to attract better clients.</p>
+                <a href="read-blog.html" class="blog-link">Read more <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="blog-card">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="" class="card-img" />
+              <div class="card-body-inner">
+                <span class="blog-date">19 Jan 2022</span>
+                <p class="blog-title">How one Webflow user grew his single person consultancy from $0–100K in 14 months</p>
+                <p class="blog-excerpt">See how pivoting to Webflow changed one person's sales strategy and allowed him to attract better clients.</p>
+                <a href="read-blog.html" class="blog-link">Read more <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="blog-card">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="" class="card-img" />
+              <div class="card-body-inner">
+                <span class="blog-date">19 Jan 2022</span>
+                <p class="blog-title">How one Webflow user grew his single person consultancy from $0–100K in 14 months</p>
+                <p class="blog-excerpt">See how pivoting to Webflow changed one person's sales strategy and allowed him to attract better clients.</p>
+                <a href="read-blog.html" class="blog-link">Read more <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="site-footer pt-5 pb-4">
+      <div class="container position-relative" style="z-index:1;">
+        <div class="row gy-5 pb-4">
+          <div class="col-lg-5">
+            <img src="/assets/images/Logo-2.svg" alt="Finsweet" height="32" class="mb-3" />
+            <p class="footer-desc">We are always open to discuss your project and improve your online presence.</p>
+            <div class="footer-contact-pill mt-4">
+              <div>
+                <p class="pill-label mb-1">Email me at</p>
+                <p class="pill-value mb-0">contact@website.com</p>
+              </div>
+              <div>
+                <p class="pill-label mb-1">Call us</p>
+                <p class="pill-value mb-0">0927 6277 28525</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <h2 class="footer-talk-title text-white mb-3">Let's Talk!</h2>
+            <p class="footer-talk-desc mb-4">We are always open to discuss your project, improve your online presence and help with your UX/UI design challenges.</p>
+            <div class="d-flex gap-2">
+              <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-divider my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="footer-copy mb-0">Copyright 2024, Finsweet.com</p>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex flex-wrap justify-content-md-end gap-4">
+              <a href="index.html"    class="footer-link">Home</a>
+              <a href="aboutus.html"  class="footer-link">About us</a>
+              <a href="features.html" class="footer-link">Features</a>
+              <a href="pricing.html"  class="footer-link">Pricing</a>
+              <a href="privacy.html"  class="footer-link">FAQ</a>
+              <a href="blog.html"     class="footer-link">Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
