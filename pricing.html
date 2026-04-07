@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فينسويت | الأسعار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="shared.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+</head>
+<body>
+<nav class="main-nav navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="assets/images/Logo-2.svg" alt="فينسويت" height="34" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="فتح القائمة"><span class="navbar-toggler-icon" style="filter:invert(1);"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+        <li class="nav-item"><a class="nav-link " href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link " href="aboutus.html" data-i18n="nav_about">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link " href="features.html" data-i18n="nav_features">المميزات</a></li>
+        <li class="nav-item"><a class="nav-link active" href="pricing.html" data-i18n="nav_pricing">الأسعار</a></li>
+        <li class="nav-item"><a class="nav-link " href="privacy.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+        <li class="nav-item"><a class="nav-link " href="blog.html" data-i18n="nav_blog">المدونة</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+        <button id="lang-toggle-btn" onclick="toggleLang()" aria-label="التحويل للإنجليزية" style="background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);border-radius:10px;padding:.38rem .85rem;cursor:pointer;display:inline-flex;align-items:center;gap:.45rem;transition:all 220ms;color:#fff;font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.04em;">
+          <span class="lang-flag" style="font-size:1rem;line-height:1;">🇬🇧</span>
+          <span class="lang-label">EN</span>
+        </button>
+        <a href="contact-us.html" class="btn-contact" data-i18n="nav_contact">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PRICING HEADER -->
+<section style="background:var(--offwhite);padding:6rem 0 5rem;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="eyebrow justify-content-center mb-3" data-i18n="pr_eyebrow">الباقات</p>
+      <h1 class="section-title mx-auto mb-3" style="max-width:480px;" data-i18n="pr_title">خطط الأسعار لدينا</h1>
+      <p style="color:var(--muted);max-width:460px;margin:0 auto;font-size:.95rem;line-height:1.85;font-family:'Cairo',sans-serif;">عندما تكون مستعداً للانتقال إلى ما هو أبعد من مجرد النماذج الأولية، نحن هنا لمساعدتك في تحويل تصاميمك إلى واقع رقمي مذهل.</p>
+    </div>
+
+    <!-- PRICING CARDS -->
+    <div class="row g-4 justify-content-center">
+      <!-- Plan 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="pricing-card h-100">
+          <div>
+            <div class="d-flex align-items-baseline gap-2 mb-1">
+              <span class="price-num">$299</span>
+              <span class="price-per" style="color:var(--blue-v);" data-i18n="plan1_per">لكل تصميم</span>
+            </div>
+            <h3 class="plan-name mb-2" data-i18n="plan1_name">صفحة هبوط</h3>
+            <p style="font-family:'Cairo',sans-serif;font-size:.875rem;color:var(--muted);line-height:1.75;">مثالي للشركات الناشئة التي تحتاج إلى صفحة هبوط احترافية وجذابة.</p>
+          </div>
+          <div class="d-flex flex-column gap-2 flex-grow-1">
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>جميع الروابط المحدودة</span></div>
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>منصة تحليلات خاصة</span></div>
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>دعم عبر المحادثة</span></div>
+            <div class="feat-list-item" style="opacity:.4;"><img src="./assets/images/Pointer (1).svg" alt="" /><span>تحسين الهاشتاقات</span></div>
+            <div class="feat-list-item" style="opacity:.4;"><img src="./assets/images/Pointer (1).svg" alt="" /><span>مستخدمون غير محدودين</span></div>
+          </div>
+          <a href="contact-us.html" class="btn-dark text-center d-block">ابدأ الآن</a>
+        </div>
+      </div>
+
+      <!-- Plan 2 – Featured -->
+      <div class="col-md-6 col-lg-4">
+        <div class="pricing-card featured h-100">
+          <div>
+            <div class="d-flex align-items-baseline gap-2 mb-1">
+              <span class="price-num text-white">$399</span>
+              <span class="price-per" style="color:var(--gold);" data-i18n="plan2_per">تصاميم متعددة</span>
+            </div>
+            <h3 class="plan-name mb-2 text-white" data-i18n="plan2_name">موقع متكامل</h3>
+            <p style="font-family:'Cairo',sans-serif;font-size:.875rem;color:rgba(255,255,255,.6);line-height:1.75;">الباقة الأكثر شيوعاً للشركات التي تريد حضوراً رقمياً قوياً ومتكاملاً.</p>
+          </div>
+          <div class="d-flex flex-column gap-2 flex-grow-1">
+            <div class="feat-list-item text-white"><img src="./assets/images/Pointer.svg" alt="" /><span>جميع الروابط المحدودة</span></div>
+            <div class="feat-list-item text-white"><img src="./assets/images/Pointer.svg" alt="" /><span>منصة تحليلات خاصة</span></div>
+            <div class="feat-list-item text-white"><img src="./assets/images/Pointer.svg" alt="" /><span>دعم عبر المحادثة</span></div>
+            <div class="feat-list-item text-white"><img src="./assets/images/Pointer.svg" alt="" /><span>تحسين الهاشتاقات</span></div>
+            <div class="feat-list-item text-white"><img src="./assets/images/Pointer.svg" alt="" /><span>مستخدمون غير محدودين</span></div>
+          </div>
+          <a href="contact-us.html" class="btn-gold text-center d-block">ابدأ الآن</a>
+        </div>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="pricing-card h-100">
+          <div>
+            <div class="d-flex align-items-baseline gap-2 mb-1">
+              <span class="price-num">$499</span>
+              <span class="price-per" style="color:var(--blue-v);" data-i18n="plan3_per">لكل تصميم</span>
+            </div>
+            <h3 class="plan-name mb-2" data-i18n="plan3_name">مشروع معقد</h3>
+            <p style="font-family:'Cairo',sans-serif;font-size:.875rem;color:var(--muted);line-height:1.75;">للمشاريع الكبيرة التي تتطلب حلولاً مخصصة وعملاً تفصيلياً متقدماً.</p>
+          </div>
+          <div class="d-flex flex-column gap-2 flex-grow-1">
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>جميع الروابط المحدودة</span></div>
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>منصة تحليلات خاصة</span></div>
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>دعم عبر المحادثة</span></div>
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>تحسين الهاشتاقات</span></div>
+            <div class="feat-list-item"><img src="./assets/images/Pointer.svg" alt="" /><span>مستخدمون غير محدودين</span></div>
+          </div>
+          <a href="contact-us.html" class="btn-dark text-center d-block">ابدأ الآن</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--slate);padding:5rem 0 6rem;">
+  <div class="container"><div class="row gy-5 gx-5">
+    <div class="col-lg-4"><p class="eyebrow mb-3" data-i18n="faq_eyebrow">الأسئلة الشائعة</p><h2 class="section-title mb-3" data-i18n="faq_title">الأسئلة الأكثر شيوعاً</h2><a href="contact-us.html" class="link-arrow d-inline-flex mt-2">تواصل معنا للمزيد <i class="fa-solid fa-arrow-left-long me-1"></i></a></div>
+    <div class="col-lg-8"><div class="d-flex flex-column gap-3">
+      <div class="faq-item"><span class="faq-num">01</span><div class="flex-grow-1"><p class="faq-q">كم يستغرق تنفيذ المشروع؟</p><p class="faq-answer">يعتمد ذلك على حجم المشروع وتعقيده. عادةً تستغرق صفحات الهبوط من 5 إلى 7 أيام، بينما تستغرق المواقع الكاملة من 2 إلى 6 أسابيع.</p></div><div class="faq-toggle"><img src="./assets/images/+.svg" alt="+" /></div></div>
+      <div class="faq-item"><span class="faq-num">02</span><p class="faq-q flex-grow-1">ما هي اصطلاحات تسمية الكلاسات التي تستخدمونها؟</p><div class="faq-toggle"><img src="./assets/images/++.svg" alt="+" /></div></div>
+      <div class="faq-item"><span class="faq-num">03</span><p class="faq-q flex-grow-1">كيف يتم التواصل خلال المشروع؟</p><div class="faq-toggle"><img src="./assets/images/++.svg" alt="+" /></div></div>
+      <div class="faq-item"><span class="faq-num">04</span><p class="faq-q flex-grow-1">هل تستطيعون التعامل مع المشاريع الكبيرة؟</p><div class="faq-toggle"><img src="./assets/images/++.svg" alt="+" /></div></div>
+      <div class="faq-item"><span class="faq-num">05</span><p class="faq-q flex-grow-1">هل تقدمون خدمات الصيانة بعد الإطلاق؟</p><div class="faq-toggle"><img src="./assets/images/++.svg" alt="+" /></div></div>
+    </div></div>
+  </div></div>
+</section>
+
+<footer class="site-footer pt-5 pb-4"><div class="container position-relative" style="z-index:1;"><div class="row gy-5 pb-4"><div class="col-lg-5"><img src="assets/images/Logo-2.svg" alt="فينسويت" height="32" class="mb-3" /><p class="footer-desc">نحن دائماً منفتحون لمناقشة مشروعك وتطوير حضورك الرقمي.</p><div class="footer-contact-pill mt-4"><div><p class="pill-label mb-1">راسلنا على</p><p class="pill-value mb-0"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c5f5352485d5f487c4b595e4f554859125f5351">[email&#160;protected]</a></p></div><div><p class="pill-label mb-1">اتصل بنا</p><p class="pill-value mb-0">0927 6277 28525</p></div></div></div><div class="col-lg-6 offset-lg-1"><h2 class="footer-talk-title text-white mb-3">لنتحدث!</h2><p class="footer-talk-desc mb-4">نحن دائماً منفتحون لمناقشة مشروعك وتحسين حضورك الإلكتروني.</p><div class="d-flex gap-2"><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></div></div></div><hr class="footer-divider my-4" /><div class="row align-items-center"><div class="col-md-6 mb-3 mb-md-0"><p class="footer-copy mb-0">حقوق النشر 2024، Finsweet.com</p></div><div class="col-md-6"><div class="d-flex flex-wrap justify-content-md-start gap-4"><a href="index.html" class="footer-link">الرئيسية</a><a href="aboutus.html" class="footer-link">من نحن</a><a href="features.html" class="footer-link">المميزات</a><a href="pricing.html" class="footer-link">الأسعار</a><a href="privacy.html" class="footer-link">الأسئلة الشائعة</a><a href="blog.html" class="footer-link">المدونة</a></div></div></div></div></footer>
+
+<script src="lang.js"></script>
+
+</body>
+</html>

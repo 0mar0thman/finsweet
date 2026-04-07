@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فينسويت | المدونة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="shared.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+</head>
+<body>
+<nav class="main-nav navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="assets/images/Logo-2.svg" alt="فينسويت" height="34" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="فتح القائمة"><span class="navbar-toggler-icon" style="filter:invert(1);"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+        <li class="nav-item"><a class="nav-link " href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link " href="aboutus.html" data-i18n="nav_about">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link " href="features.html" data-i18n="nav_features">المميزات</a></li>
+        <li class="nav-item"><a class="nav-link " href="pricing.html" data-i18n="nav_pricing">الأسعار</a></li>
+        <li class="nav-item"><a class="nav-link " href="privacy.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html" data-i18n="nav_blog">المدونة</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+        <button id="lang-toggle-btn" onclick="toggleLang()" aria-label="التحويل للإنجليزية" style="background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);border-radius:10px;padding:.38rem .85rem;cursor:pointer;display:inline-flex;align-items:center;gap:.45rem;transition:all 220ms;color:#fff;font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.04em;">
+          <span class="lang-flag" style="font-size:1rem;line-height:1;">🇬🇧</span>
+          <span class="lang-label">EN</span>
+        </button>
+        <a href="contact-us.html" class="btn-contact" data-i18n="nav_contact">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- FEATURED POST -->
+<section style="background:#fff;padding:6rem 0 4rem;">
+  <div class="container">
+    <div class="row align-items-center gy-5 gx-5">
+      <div class="col-lg-6">
+        <span class="blog-date d-block mb-3" data-i18n="blog_featured">مقال مميز</span>
+        <h1 class="section-title mb-3" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">دراسة حالة في تجربة المستخدم: خلق بيئة دراسية مثالية للطلاب</h1>
+        <p style="color:var(--muted);font-size:.875rem;margin-bottom:1rem;font-family:'Cairo',sans-serif;">أندرو جونسون &nbsp;·&nbsp; نُشر في 27 يناير 2021</p>
+        <p style="color:var(--muted);line-height:1.85;font-size:.95rem;font-family:'Cairo',sans-serif;">يبدو أننا وصلنا إلى ارتفاع شاهق في الغلاف الجوي، حيث كانت السماء سوداء داكنة وتوقفت النجوم عن الوميض. استكشاف عميق لتحسين تجربة التعلم الرقمي.</p>
+        <a href="read-blog.html" class="btn-dark mt-3 d-inline-block" data-i18n="blog_read_full">اقرأ المقال كاملاً</a>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80" alt="مقال مميز" style="width:100%;border-radius:20px;aspect-ratio:16/10;object-fit:cover;display:block;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section style="background:var(--offwhite);padding:5rem 0 6rem;">
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col"><p class="eyebrow mb-2" data-i18n="blog_all_eye">جميع المقالات</p><h2 class="section-title mb-0" data-i18n="blog_our_blog">مدونتنا</h2></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="blog-card"><img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80" alt="" class="card-img" /><div class="card-body-inner"><span class="blog-date">19 يناير 2022</span><p class="blog-title">كيف حقق مستقل بمفرده دخلاً بلغ 100 ألف دولار في 14 شهراً</p><p class="blog-excerpt">اكتشف كيف غيّر التحوّل نحو Webflow استراتيجيته وساعده على جذب عملاء أفضل وأكثر ربحاً.</p><a href="read-blog.html" class="blog-link">اقرأ المزيد <i class="fa-solid fa-arrow-left-long"></i></a></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="blog-card"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="" class="card-img" /><div class="card-body-inner"><span class="blog-date">19 يناير 2022</span><p class="blog-title">كيف حقق مستقل بمفرده دخلاً بلغ 100 ألف دولار في 14 شهراً</p><p class="blog-excerpt">اكتشف كيف غيّر التحوّل نحو Webflow استراتيجيته وساعده على جذب عملاء أفضل وأكثر ربحاً.</p><a href="read-blog.html" class="blog-link">اقرأ المزيد <i class="fa-solid fa-arrow-left-long"></i></a></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="blog-card"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="" class="card-img" /><div class="card-body-inner"><span class="blog-date">19 يناير 2022</span><p class="blog-title">كيف حقق مستقل بمفرده دخلاً بلغ 100 ألف دولار في 14 شهراً</p><p class="blog-excerpt">اكتشف كيف غيّر التحوّل نحو Webflow استراتيجيته وساعده على جذب عملاء أفضل وأكثر ربحاً.</p><a href="read-blog.html" class="blog-link">اقرأ المزيد <i class="fa-solid fa-arrow-left-long"></i></a></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="blog-card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="" class="card-img" /><div class="card-body-inner"><span class="blog-date">19 يناير 2022</span><p class="blog-title">كيف حقق مستقل بمفرده دخلاً بلغ 100 ألف دولار في 14 شهراً</p><p class="blog-excerpt">اكتشف كيف غيّر التحوّل نحو Webflow استراتيجيته وساعده على جذب عملاء أفضل وأكثر ربحاً.</p><a href="read-blog.html" class="blog-link">اقرأ المزيد <i class="fa-solid fa-arrow-left-long"></i></a></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="blog-card"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="" class="card-img" /><div class="card-body-inner"><span class="blog-date">19 يناير 2022</span><p class="blog-title">كيف حقق مستقل بمفرده دخلاً بلغ 100 ألف دولار في 14 شهراً</p><p class="blog-excerpt">اكتشف كيف غيّر التحوّل نحو Webflow استراتيجيته وساعده على جذب عملاء أفضل وأكثر ربحاً.</p><a href="read-blog.html" class="blog-link">اقرأ المزيد <i class="fa-solid fa-arrow-left-long"></i></a></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="blog-card"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="" class="card-img" /><div class="card-body-inner"><span class="blog-date">19 يناير 2022</span><p class="blog-title">كيف حقق مستقل بمفرده دخلاً بلغ 100 ألف دولار في 14 شهراً</p><p class="blog-excerpt">اكتشف كيف غيّر التحوّل نحو Webflow استراتيجيته وساعده على جذب عملاء أفضل وأكثر ربحاً.</p><a href="read-blog.html" class="blog-link">اقرأ المزيد <i class="fa-solid fa-arrow-left-long"></i></a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer pt-5 pb-4"><div class="container position-relative" style="z-index:1;"><div class="row gy-5 pb-4"><div class="col-lg-5"><img src="assets/images/Logo-2.svg" alt="فينسويت" height="32" class="mb-3" /><p class="footer-desc">نحن دائماً منفتحون لمناقشة مشروعك وتطوير حضورك الرقمي.</p><div class="footer-contact-pill mt-4"><div><p class="pill-label mb-1">راسلنا على</p><p class="pill-value mb-0"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb9894958f9a988fbb8c9e9988928f9ed5989496">[email&#160;protected]</a></p></div><div><p class="pill-label mb-1">اتصل بنا</p><p class="pill-value mb-0">0927 6277 28525</p></div></div></div><div class="col-lg-6 offset-lg-1"><h2 class="footer-talk-title text-white mb-3">لنتحدث!</h2><p class="footer-talk-desc mb-4">نحن دائماً منفتحون لمناقشة مشروعك وتحسين حضورك الإلكتروني.</p><div class="d-flex gap-2"><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></div></div></div><hr class="footer-divider my-4" /><div class="row align-items-center"><div class="col-md-6 mb-3 mb-md-0"><p class="footer-copy mb-0">حقوق النشر 2024، Finsweet.com</p></div><div class="col-md-6"><div class="d-flex flex-wrap justify-content-md-start gap-4"><a href="index.html" class="footer-link">الرئيسية</a><a href="aboutus.html" class="footer-link">من نحن</a><a href="features.html" class="footer-link">المميزات</a><a href="pricing.html" class="footer-link">الأسعار</a><a href="privacy.html" class="footer-link">الأسئلة الشائعة</a><a href="blog.html" class="footer-link">المدونة</a></div></div></div></div></footer>
+<script src="lang.js"></script>
+
+</body>
+</html>
